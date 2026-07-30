@@ -146,13 +146,52 @@ a {
 }
 
 .header-action {
-  min-width: 118px;
-  padding: 0 22px;
+  display: inline-grid;
+  grid-template-columns: 28px minmax(66px, 1fr) 28px;
+  gap: 8px;
+  min-width: 152px;
+  padding: 0 12px;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: linear-gradient(135deg, var(--red), var(--red-dark));
   box-shadow: 0 12px 28px rgba(125, 14, 22, 0.28);
   line-height: 1;
+}
+
+.header-action::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+}
+
+.header-action-icon,
+.header-action::after {
+  align-self: center;
+}
+
+.header-action-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: var(--red-dark);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.header-action-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.header-action-label {
+  align-self: center;
+  justify-self: center;
 }
 
 .site-header.is-scrolled .header-action,
