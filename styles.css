@@ -146,15 +146,19 @@ a {
 }
 
 .header-action {
-  gap: 10px;
-  padding: 0 18px 0 12px;
+  position: relative;
+  min-width: 146px;
+  padding: 0 18px;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: linear-gradient(135deg, var(--red), var(--red-dark));
   box-shadow: 0 12px 28px rgba(125, 14, 22, 0.28);
+  line-height: 1;
 }
 
 .header-action-icon {
+  position: absolute;
+  left: 12px;
   display: grid;
   place-items: center;
   width: 28px;
