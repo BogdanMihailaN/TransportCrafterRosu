@@ -23,6 +23,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 88px;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -603,6 +607,10 @@ p {
   box-shadow: 0 14px 34px rgba(17, 17, 17, 0.07);
 }
 
+.contact-link div {
+  min-width: 0;
+}
+
 .contact-link span {
   display: grid;
   place-items: center;
@@ -626,6 +634,7 @@ p {
 
 .contact-link strong {
   font-size: clamp(19px, 2.2vw, 26px);
+  overflow-wrap: anywhere;
 }
 
 .contact-note {
@@ -705,11 +714,11 @@ p {
   }
 
   .hero {
-    min-height: 90svh;
+    min-height: 92svh;
   }
 
   .hero-image {
-    object-position: 67% center;
+    object-position: 58% center;
   }
 
   .hero-overlay {
@@ -721,12 +730,13 @@ p {
   .hero-content {
     width: min(340px, calc(100% - 36px));
     margin-left: 18px;
-    padding: 92px 0 28px;
+    padding: 86px 0 24px;
   }
 
   h1 {
-    margin-bottom: 18px;
-    font-size: 40px;
+    max-width: 340px;
+    margin-bottom: 16px;
+    font-size: 36px;
     line-height: 1.02;
   }
 
@@ -735,8 +745,10 @@ p {
   }
 
   .hero-lead {
-    margin-bottom: 24px;
-    line-height: 1.6;
+    max-width: 330px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .hero-actions,
@@ -749,7 +761,8 @@ p {
   .hero-actions {
     display: grid;
     max-width: 330px;
-    margin-bottom: 22px;
+    gap: 10px;
+    margin-bottom: 18px;
   }
 
   .button {
@@ -758,7 +771,7 @@ p {
 
   .hero-stats {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: 354px;
+    max-width: 340px;
   }
 
   .hero-stats div {
@@ -767,7 +780,7 @@ p {
   }
 
   .hero-stats dt {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .hero-stats dd {
@@ -796,6 +809,19 @@ p {
 
   .contact-link {
     align-items: flex-start;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+
+  .contact-link span {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .contact-link strong {
+    font-size: 16px;
+    line-height: 1.25;
   }
 
   .site-footer {
@@ -810,6 +836,6 @@ p {
 
 @media (max-width: 360px) {
   h1 {
-    font-size: 36px;
+    font-size: 33px;
   }
 }
