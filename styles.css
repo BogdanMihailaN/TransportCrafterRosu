@@ -146,27 +146,14 @@ a {
 }
 
 .header-action {
-  display: inline-grid;
-  grid-template-columns: 28px minmax(66px, 1fr) 28px;
-  gap: 8px;
-  min-width: 152px;
-  padding: 0 12px;
+  gap: 10px;
+  min-width: 136px;
+  padding: 0 18px;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: linear-gradient(135deg, var(--red), var(--red-dark));
   box-shadow: 0 12px 28px rgba(125, 14, 22, 0.28);
   line-height: 1;
-}
-
-.header-action::after {
-  content: "";
-  width: 28px;
-  height: 28px;
-}
-
-.header-action-icon,
-.header-action::after {
-  align-self: center;
 }
 
 .header-action-icon {
@@ -184,8 +171,7 @@ a {
 }
 
 .header-action-label {
-  align-self: center;
-  justify-self: center;
+  display: block;
 }
 
 .site-header.is-scrolled .header-action,
