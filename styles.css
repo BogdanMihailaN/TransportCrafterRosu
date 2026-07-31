@@ -607,6 +607,10 @@ p {
   box-shadow: 0 14px 34px rgba(17, 17, 17, 0.07);
 }
 
+.contact-link {
+  container-type: inline-size;
+}
+
 .contact-link div {
   min-width: 0;
 }
@@ -633,8 +637,16 @@ p {
 }
 
 .contact-link strong {
+  display: block;
   font-size: clamp(19px, 2.2vw, 26px);
-  overflow-wrap: anywhere;
+  line-height: 1.1;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.contact-link[href^="mailto"] strong {
+  font-size: clamp(12px, 4.05cqw, 22px);
+  white-space: nowrap;
 }
 
 .contact-note {
