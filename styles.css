@@ -91,16 +91,22 @@ a {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 42px;
   height: 42px;
   flex: 0 0 42px;
-  border: 1px solid currentColor;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.64);
   border-radius: 50%;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0;
+  background-image: url("assets/favicon.png");
+  background-position: 18% 70%;
+  background-size: 215%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 18px rgba(17, 17, 17, 0.24);
+}
+
+.site-header.is-scrolled .brand-mark,
+.site-header.menu-active .brand-mark {
+  border-color: rgba(17, 17, 17, 0.12);
 }
 
 .brand strong,
