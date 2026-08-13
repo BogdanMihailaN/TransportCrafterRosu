@@ -599,53 +599,36 @@ p {
 
 .weekend-road {
   position: relative;
-  display: none;
-  min-height: 72svh;
   overflow: hidden;
-  color: var(--white);
-  background: #111111;
-}
-
-.weekend-road img,
-.weekend-road-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  color: var(--ink);
+  background: var(--white);
 }
 
 .weekend-road img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: center;
+  object-position: 68% center;
 }
 
 .weekend-road-overlay {
-  background:
-    linear-gradient(90deg, rgba(8, 8, 8, 0.9) 0%, rgba(8, 8, 8, 0.56) 34%, rgba(8, 8, 8, 0.08) 72%),
-    linear-gradient(0deg, rgba(8, 8, 8, 0.42), rgba(8, 8, 8, 0.08));
+  display: none;
 }
 
 .weekend-road-copy {
-  position: relative;
-  z-index: 2;
   display: grid;
-  align-content: center;
-  width: min(660px, calc(100% - 120px));
-  min-height: 72svh;
-  margin-left: clamp(36px, 6vw, 84px);
-  padding: 86px 0;
+  padding: 52px 18px 28px;
 }
 
 .weekend-road-copy h2 {
   max-width: 620px;
-  font-size: clamp(38px, 5vw, 68px);
 }
 
 .weekend-road-copy p:not(.eyebrow) {
   max-width: 540px;
   margin-bottom: 28px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .weekend-road-copy .button {
@@ -780,7 +763,48 @@ p {
 
 @media (min-width: 981px) {
   .weekend-road {
+    min-height: 72svh;
+    color: var(--white);
+    background: #111111;
+  }
+
+  .weekend-road img,
+  .weekend-road-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .weekend-road img {
+    aspect-ratio: auto;
+    object-position: center;
+  }
+
+  .weekend-road-overlay {
     display: block;
+    background:
+      linear-gradient(90deg, rgba(8, 8, 8, 0.9) 0%, rgba(8, 8, 8, 0.56) 34%, rgba(8, 8, 8, 0.08) 72%),
+      linear-gradient(0deg, rgba(8, 8, 8, 0.42), rgba(8, 8, 8, 0.08));
+  }
+
+  .weekend-road-copy {
+    position: relative;
+    z-index: 2;
+    align-content: center;
+    width: min(660px, calc(100% - 120px));
+    min-height: 72svh;
+    margin-left: clamp(36px, 6vw, 84px);
+    padding: 86px 0;
+  }
+
+  .weekend-road-copy h2 {
+    font-size: clamp(38px, 5vw, 68px);
+  }
+
+  .weekend-road-copy p:not(.eyebrow) {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 18px;
   }
 }
 
