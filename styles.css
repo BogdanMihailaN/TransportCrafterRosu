@@ -732,29 +732,51 @@ p {
   }
 
   .hero {
-    min-height: 92svh;
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    padding-top: clamp(430px, 64svh, 560px);
+    background: #111111;
+  }
+
+  .hero-media,
+  .hero-overlay {
+    position: absolute;
+    inset: 0 0 auto;
+    height: clamp(430px, 64svh, 560px);
   }
 
   .hero-image {
-    object-position: center center;
+    object-position: center 58%;
   }
 
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(13, 13, 13, 0.9) 0%, rgba(13, 13, 13, 0.72) 58%, rgba(13, 13, 13, 0.22) 100%),
-      linear-gradient(0deg, rgba(13, 13, 13, 0.62), rgba(13, 13, 13, 0.08));
+      linear-gradient(0deg, rgba(17, 17, 17, 0.08) 0%, rgba(17, 17, 17, 0.16) 64%, rgba(17, 17, 17, 0.58) 100%),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.36), rgba(17, 17, 17, 0.08));
   }
 
   .hero-content {
-    width: min(340px, calc(100% - 36px));
-    margin-left: 18px;
-    padding: 86px 0 24px;
+    display: grid;
+    width: 100%;
+    max-width: none;
+    margin-top: -42px;
+    margin-left: 0;
+    padding: 70px 18px 30px;
+    background:
+      linear-gradient(180deg, rgba(17, 17, 17, 0), #111111 42px),
+      #111111;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 11px;
   }
 
   h1 {
     max-width: 340px;
     margin-bottom: 16px;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1.02;
   }
 
