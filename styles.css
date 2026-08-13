@@ -752,8 +752,7 @@ p {
 
   .hero-overlay {
     background:
-      linear-gradient(0deg, rgba(17, 17, 17, 0.08) 0%, rgba(17, 17, 17, 0.16) 64%, rgba(17, 17, 17, 0.58) 100%),
-      linear-gradient(90deg, rgba(17, 17, 17, 0.36), rgba(17, 17, 17, 0.08));
+      linear-gradient(180deg, rgba(17, 17, 17, 0.32) 0%, rgba(17, 17, 17, 0.08) 22%, rgba(17, 17, 17, 0) 58%, rgba(17, 17, 17, 0.38) 100%);
   }
 
   .hero-content {
