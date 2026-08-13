@@ -282,6 +282,10 @@ a {
     linear-gradient(0deg, rgba(13, 13, 13, 0.42), rgba(13, 13, 13, 0.08));
 }
 
+.mobile-hero-call {
+  display: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -769,7 +773,7 @@ p {
     display: block;
     min-height: 0;
     overflow: visible;
-    padding-top: clamp(430px, 64svh, 560px);
+    padding-top: clamp(520px, 72svh, 660px);
     background: #111111;
   }
 
@@ -777,7 +781,7 @@ p {
   .hero-overlay {
     position: absolute;
     inset: 0 0 auto;
-    height: clamp(430px, 64svh, 560px);
+    height: clamp(520px, 72svh, 660px);
   }
 
   .hero-image {
@@ -786,18 +790,38 @@ p {
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(17, 17, 17, 0.32) 0%, rgba(17, 17, 17, 0.08) 22%, rgba(17, 17, 17, 0) 58%, rgba(17, 17, 17, 0.38) 100%);
+      linear-gradient(180deg, rgba(17, 17, 17, 0.32) 0%, rgba(17, 17, 17, 0.08) 22%, rgba(17, 17, 17, 0) 58%, rgba(17, 17, 17, 0.48) 100%);
+  }
+
+  .mobile-hero-call {
+    position: absolute;
+    top: calc(clamp(520px, 72svh, 660px) - 70px);
+    right: 18px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 4px;
+    color: var(--white);
+    background: rgba(17, 17, 17, 0.22);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(14px);
+    font-size: 15px;
+    font-weight: 800;
   }
 
   .hero-content {
     display: grid;
     width: 100%;
     max-width: none;
-    margin-top: -42px;
+    margin-top: 0;
     margin-left: 0;
-    padding: 70px 18px 30px;
+    padding: 78px 18px 30px;
     background:
-      linear-gradient(180deg, rgba(17, 17, 17, 0), #111111 42px),
+      linear-gradient(180deg, rgba(17, 17, 17, 0), #111111 54px),
       #111111;
   }
 
