@@ -38,6 +38,16 @@
       href="assets/transport-crafter-iasi-hero-1280.jpg"
       imagesrcset="assets/transport-crafter-iasi-hero-768.jpg 768w, assets/transport-crafter-iasi-hero-1280.jpg 1280w, assets/transport-crafter-iasi-hero.jpg 1672w"
       imagesizes="100vw"
+      media="(min-width: 701px)"
+      fetchpriority="high"
+    >
+    <link
+      rel="preload"
+      as="image"
+      href="assets/transport-crafter-iasi-hero-mobile-candidate.jpg"
+      imagesrcset="assets/transport-crafter-iasi-hero-mobile-candidate.jpg 941w"
+      imagesizes="100vw"
+      media="(max-width: 700px)"
       fetchpriority="high"
     >
     <link rel="stylesheet" href="styles.css">
@@ -136,6 +146,12 @@
     <main id="acasa">
       <section class="hero">
         <picture class="hero-media">
+          <source
+            media="(max-width: 700px)"
+            type="image/jpeg"
+            srcset="assets/transport-crafter-iasi-hero-mobile-candidate.jpg 941w"
+            sizes="100vw"
+          >
           <source
             type="image/jpeg"
             srcset="assets/transport-crafter-iasi-hero-768.jpg 768w, assets/transport-crafter-iasi-hero-1280.jpg 1280w, assets/transport-crafter-iasi-hero.jpg 1672w"

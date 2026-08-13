@@ -736,7 +736,7 @@ p {
   }
 
   .hero-image {
-    object-position: 58% center;
+    object-position: center center;
   }
 
   .hero-overlay {
