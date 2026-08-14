@@ -549,15 +549,18 @@ p {
 
 .vehicle-dimensions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  margin: 26px 0 0;
-  background: rgba(255, 255, 255, 0.16);
+  gap: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .vehicle-dimensions div {
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .vehicle-dimensions dt,
@@ -566,7 +569,6 @@ p {
 }
 
 .vehicle-dimensions dt {
-  margin-bottom: 8px;
   color: var(--gold);
   font-size: 11px;
   font-weight: 800;
@@ -575,9 +577,28 @@ p {
 
 .vehicle-dimensions dd {
   color: var(--white);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1;
+  white-space: nowrap;
+}
+
+.vehicle-dimensions .vehicle-dimensions-title {
+  display: block;
+  padding-top: 0;
+}
+
+.vehicle-dimensions .vehicle-dimensions-title dt {
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.vehicle-dimensions .vehicle-dimensions-title dd {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: normal;
 }
 
 .schedule-section {
