@@ -547,6 +547,39 @@ p {
   font-size: clamp(24px, 3vw, 34px);
 }
 
+.vehicle-dimensions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 26px 0 0;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.vehicle-dimensions div {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.vehicle-dimensions dt,
+.vehicle-dimensions dd {
+  margin: 0;
+}
+
+.vehicle-dimensions dt {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.vehicle-dimensions dd {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .schedule-section {
   background: var(--soft);
 }
